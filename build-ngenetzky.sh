@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 set -e
 
+export QEMU_ACCEL=kvm
+
+packer_build(){
+    # packer build "$@"
+    packer build -debug "$@"
+}
+
 PROJ_ROOT="$(pwd)"
 
 # cd "$PROJ_ROOT/Arch"
