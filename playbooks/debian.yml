@@ -53,6 +53,8 @@
       && \
     sudo update-initramfs -u
   become: true
+  when:
+    - ansible_distribution != "Ubuntu"
 
 - name: debian | Ensure eth0 is always dhcp
   lineinfile:
@@ -63,3 +65,5 @@
   loop:
     - line: "iface eth0 inet dhcp"
     - line: "allow-hotplug eth0"
+  when:
+    - ansible_distribution != "Ubuntu"
