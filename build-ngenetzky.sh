@@ -52,7 +52,7 @@ packer validate -syntax-only ubuntu-focal64.json
 
 cd "$PROJ_ROOT/Debian"
 # packer build -only proxmox -only virtualbox-iso -only vmware-iso debian-buster64.json
-packer_build -only qemu debian-buster64.json
+# packer_build -only qemu debian-buster64.json
 # packer build -only proxmox -only virtualbox-iso -only vmware-iso debian-stretch64.json
 # packer build -only qemu debian-stretch64.json
 
